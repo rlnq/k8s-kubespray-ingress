@@ -48,6 +48,7 @@ nano inventory\mycluster\group_vars\k8s_cluster\k8s-cluster.yml
 ```
 kube_proxy_strict_arp: true
 ```
+* ### [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
 
 * ### Run execute container
 * ### Go to kubespray folder and start ansible-playbook
