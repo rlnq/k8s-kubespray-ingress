@@ -13,7 +13,6 @@
 
 # 1 Step: Create and configure VM
 * VM on digitalocean with folliwing parameters:
-<img width="1158" alt="image" src="https://user-images.githubusercontent.com/117667360/216758838-abb41e53-088b-45a6-a5e0-b63266717c4c.png">
 
 * ### Clone Kubespray release repository:
 ```
@@ -51,5 +50,11 @@ kube_proxy_strict_arp: true
 * ### [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
 
 * ### Run execute container
+```
+docker run --rm -it -v /mnt/path/to/kubespray/Kubernetes2:/mnt \
+  -v /home/user/path/to/ssh/keys/.ssh:/pem \
+  quay.io/kubespray/kubespray:v2.20.0 bash
+```
+
 * ### Go to kubespray folder and start ansible-playbook
 * ### Connect to VM and copy kubectl configuration file
