@@ -78,7 +78,7 @@ nano inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
 
 
 ```
-docker run --rm -it -v /Users/anton_orlenko/kubespray:/mnt   -v ~/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
+docker run --rm -it -v /Users/anton_orlenko/kubespray:/mnt/   -v ~/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
 ```
 * Go to kubespray folder and start ansible-playbook
 ```
@@ -88,3 +88,4 @@ cd /mnt/kubespray
 ```
 ansible-playbook -i inventory/mycluster/inventory.ini --private-key /pem/id_rsa -e ansible_user=root -b  cluster.yml
 ```
+![Uploading image.png…]()
