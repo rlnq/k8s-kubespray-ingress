@@ -30,7 +30,7 @@ nano inventory/mycluster/inventory.ini
 * ### Turn on MetalLB
 
 ```
-nano inventory\mycluster\group_vars\k8s_cluster\addons.yml
+nano inventory/mycluster/group_vars/k8s_cluster/addons.yml
 ```
 ```
 metallb_enabled: true
@@ -42,7 +42,7 @@ metallb_ip_range:
 ```
 
 ```
-nano inventory\mycluster\group_vars\k8s_cluster\k8s-cluster.yml
+nano inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
 ```
 ```
 kube_proxy_strict_arp: true
