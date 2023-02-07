@@ -62,7 +62,7 @@ docker run --rm -it -v /mnt/path/to/kubespray/Kubernetes2:/mnt \
 
 
 
-
+ ------------------------------------------------------------------------
 
 ```
 nano inventory/mycluster/group_vars/k8s_cluster/addons.yml
@@ -78,3 +78,8 @@ nano inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
 docker run --rm -it -v /etc/:/mnt   -v /root/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
 ```
 
+
+
+```
+ansible-playbook -i inventory/mycluster/inventory.ini --private-key /pem/id_rsa -e ansible_user=root -b  cluster.yml
+```
