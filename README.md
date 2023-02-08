@@ -78,7 +78,7 @@ nano inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
 
 
 ```
-docker run --rm -it -v /Users/anton_orlenko/kubespray:/mnt/   -v ~/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
+docker run --rm -it -v /Users/anton_orlenko/kubespray:/mnt -v ~/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
 ```
 * Go to kubespray folder and start ansible-playbook
 ```
@@ -94,3 +94,16 @@ ansible-playbook -i inventory/mycluster/inventory.ini --private-key /pem/id_rsa 
 
 
 External ip!!!!
+
+
+<img width="1242" alt="image" src="https://user-images.githubusercontent.com/117667360/217574031-cf476405-ce1b-4408-b2da-7e525adb65c2.png">
+
+
+<img width="1239" alt="image" src="https://user-images.githubusercontent.com/117667360/217574877-0dae60a7-85cb-4b5c-8abc-825600716b6e.png">
+
+<img width="662" alt="image" src="https://user-images.githubusercontent.com/117667360/217587599-4cf7329a-5c07-4538-b546-0f2874c9b5c8.png">
+
+<img width="1046" alt="image" src="https://user-images.githubusercontent.com/117667360/217588685-a9889da9-350b-44dd-b1f5-c4adf9dd79a1.png">
+
+
+  
