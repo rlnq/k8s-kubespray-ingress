@@ -105,5 +105,8 @@ External ip!!!!
 
 <img width="1046" alt="image" src="https://user-images.githubusercontent.com/117667360/217588685-a9889da9-350b-44dd-b1f5-c4adf9dd79a1.png">
 
+<img width="1089" alt="image" src="https://user-images.githubusercontent.com/117667360/217685308-85b0474b-2683-4fae-9106-f18f87e7e40f.png">
 
-  
+<img width="1026" alt="image" src="https://user-images.githubusercontent.com/117667360/217685112-6f4cb3f2-e039-4131-833e-639fc1717b64.png">
+
+
