@@ -100,6 +100,7 @@ kubectl apply -f deployment.yaml
 ```
 <img width="1046" alt="image" src="https://user-images.githubusercontent.com/117667360/217588685-a9889da9-350b-44dd-b1f5-c4adf9dd79a1.png">
 
+* Check that it’s all set up correctly:
 ```
 kubectl get deployment
 kubectl get svc
