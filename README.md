@@ -1,4 +1,4 @@
-# Homework 12 - Task3. K8S - Kubespray
+# Homework 13 - Task3. K8S - Kubespray
 ## Task
 #### 1. Create and configure VM:
 > * Clone Kubespray release repository
