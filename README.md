@@ -50,11 +50,12 @@ kube_proxy_strict_arp: true
 ```
 <img width="1022" alt="image" src="https://user-images.githubusercontent.com/117667360/217277394-aa6d70fe-945f-43f8-8bc5-9f911459c61b.png">
 
-* Run execute container
+* ### Run execute container
 ```
 docker run --rm -it -v /*your_folder*/kubespray:/mnt -v ~/.ssh:/pem   quay.io/kubespray/kubespray:v2.20.0 bash
 ```
-* Go to kubespray folder and start ansible-playbook
+
+* ### Go to kubespray folder and start ansible-playbook
 ```
 cd /mnt/kubespray
 ```
@@ -64,16 +65,25 @@ ansible-playbook -i inventory/mycluster/inventory.ini --private-key /pem/id_rsa 
 ```
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/117667360/217348736-a84dc206-6549-45da-a3b3-306cf2595f7e.png">
 
+```
+kubectl get nodes
+kubectl get ns
+```
 <img width="1197" alt="image" src="https://user-images.githubusercontent.com/117667360/217352562-7ae90e21-6230-48fc-bee1-1597e515a5d9.png">
 
-
-External ip!!!!
-
-
-<img width="1242" alt="image" src="https://user-images.githubusercontent.com/117667360/217574031-cf476405-ce1b-4408-b2da-7e525adb65c2.png">
-
-
+# Step 2: Install Ingress-controller
+```
+kubectl apply -f nginx-ctl.yaml
+kubectl apply -f path_provisioner.yaml
+```
+* Check that it’s all set up correctly:
+```
+kubectl get pods -n ingress-nginx -w
+kubectl get svc --all-namespaces
+```
 <img width="1239" alt="image" src="https://user-images.githubusercontent.com/117667360/217574877-0dae60a7-85cb-4b5c-8abc-825600716b6e.png">
+
+#### Step 3: Prepare domain name and Configure cert-manager
 
 <img width="662" alt="image" src="https://user-images.githubusercontent.com/117667360/217587599-4cf7329a-5c07-4538-b546-0f2874c9b5c8.png">
 
