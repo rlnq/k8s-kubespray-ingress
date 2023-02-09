@@ -89,7 +89,7 @@ I used my domain on Hostinger:
 
 <img width="1089" alt="image" src="https://user-images.githubusercontent.com/117667360/217685308-85b0474b-2683-4fae-9106-f18f87e7e40f.png">
 
-#### 4. Prepare Nginx deployment ( deployment, service, ingress )
+#### Step 4: Prepare Nginx deployment ( deployment, service, ingress )
 ```
 kubectl apply -f issuer.yaml
 ```
@@ -101,10 +101,13 @@ kubectl apply -f deployment.yaml
 <img width="1046" alt="image" src="https://user-images.githubusercontent.com/117667360/217588685-a9889da9-350b-44dd-b1f5-c4adf9dd79a1.png">
 
 ```
-
+kubectl get deployment
+kubectl get svc
+kubectl get ingress
 ```
 <img width="1199" alt="image" src="https://user-images.githubusercontent.com/117667360/217780518-260d6182-6ecb-4019-a1fa-14efc09825ab.png">
 
+Website moodle.website:
 
 <img width="1026" alt="image" src="https://user-images.githubusercontent.com/117667360/217685112-6f4cb3f2-e039-4131-833e-639fc1717b64.png">
 
