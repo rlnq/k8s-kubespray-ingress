@@ -72,6 +72,9 @@ kubectl get ns
 <img width="1197" alt="image" src="https://user-images.githubusercontent.com/117667360/217352562-7ae90e21-6230-48fc-bee1-1597e515a5d9.png">
 
 # Step 2: Install Ingress-controller
+
+Files: [nginx-ctl.yaml](https://github.com/rlnq/k8s-kubespray-ingress/blob/main/nginx-ctl.yaml) [path_provisioner.yaml](https://github.com/rlnq/k8s-kubespray-ingress/blob/main/path_provisioner.yaml)
+
 ```
 kubectl apply -f nginx-ctl.yaml
 kubectl apply -f path_provisioner.yaml
@@ -83,18 +86,23 @@ kubectl get svc --all-namespaces
 ```
 <img width="1239" alt="image" src="https://user-images.githubusercontent.com/117667360/217574877-0dae60a7-85cb-4b5c-8abc-825600716b6e.png">
 
-#### Step 3: Prepare domain name and Configure cert-manager
+# Step 3: Prepare domain name and Configure cert-manager
 
 I used my domain on Hostinger: 
 
 <img width="1089" alt="image" src="https://user-images.githubusercontent.com/117667360/217685308-85b0474b-2683-4fae-9106-f18f87e7e40f.png">
 
-#### Step 4: Prepare Nginx deployment ( deployment, service, ingress )
+# Step 4: Prepare Nginx deployment ( deployment, service, ingress )
+
+Files: [issuer.yaml](https://github.com/rlnq/k8s-kubespray-ingress/blob/main/issuer.yaml), [deployment.yaml](https://github.com/rlnq/k8s-kubespray-ingress/blob/main/deployment.yaml)
+
+* ### Run letsencrypt-prod:
 ```
 kubectl apply -f issuer.yaml
 ```
 <img width="662" alt="image" src="https://user-images.githubusercontent.com/117667360/217587599-4cf7329a-5c07-4538-b546-0f2874c9b5c8.png">
 
+* ### Run Deployment, Service and Ingress:
 ```
 kubectl apply -f deployment.yaml
 ```
@@ -108,7 +116,7 @@ kubectl get ingress
 ```
 <img width="1199" alt="image" src="https://user-images.githubusercontent.com/117667360/217780518-260d6182-6ecb-4019-a1fa-14efc09825ab.png">
 
-Website moodle.website:
+# Result: website [moodle.website](https://moodle.website/)
 
 <img width="1026" alt="image" src="https://user-images.githubusercontent.com/117667360/217685112-6f4cb3f2-e039-4131-833e-639fc1717b64.png">
 
